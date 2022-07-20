@@ -1,9 +1,14 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render } from "@testing-library/react";
+import { BrowserRouter } from "react-router-dom";
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+import App from "./App";
+
+describe("App", () => {
+  it("renders full app", () => {
+    // Act
+    const { getByText } = render(<App />, { wrapper: BrowserRouter });
+
+    // Assert
+    expect(getByText("Gallery component")).toBeInTheDocument();
+  });
 });
