@@ -1,6 +1,6 @@
 import { createServer } from "miragejs";
 
-const photoIds = [...Array(20).keys()].map((x) => x + 1);
+const photoIds = Array.from({ length: 20 }, (x, i) => i).map((x) => x + 1);
 const mockPhotos = photoIds.map((id) => ({
   title: `Photo ${id}`,
   description: `Description for photo ${id}`,
