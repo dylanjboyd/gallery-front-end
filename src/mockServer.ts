@@ -8,17 +8,17 @@ const configureMockServer = () =>
           {
             title: "Photo one",
             description: "Description for photo one",
-            imgSrc: "",
+            imgSrc: "https://picsum.photos/id/1/200",
           },
           {
             title: "Photo two",
             description: "Description for photo two",
-            imgSrc: "",
+            imgSrc: "https://picsum.photos/id/2/200",
           },
           {
             title: "Photo three",
             description: "Description for photo three",
-            imgSrc: "",
+            imgSrc: "https://picsum.photos/id/3/200",
           },
         ],
       });
