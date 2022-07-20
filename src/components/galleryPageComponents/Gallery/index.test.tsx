@@ -10,6 +10,7 @@ describe("Gallery", () => {
         title: "Test title",
         description: "Test description",
         imgSrc: "https://example.com",
+        fullImgSrc: "https://example.com",
       },
     ];
 

@@ -20,11 +20,13 @@ describe("GalleryPage", () => {
         title: "First photo",
         description: "First desc",
         imgSrc: "https://example.com",
+        fullImgSrc: "https://example.com",
       },
       {
         title: "Second photo",
         description: "Second desc",
         imgSrc: "https://example.com",
+        fullImgSrc: "https://example.com",
       },
     ];
     const fetchPhotos = async () => {

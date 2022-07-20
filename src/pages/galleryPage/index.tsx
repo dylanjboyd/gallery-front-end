@@ -1,21 +1,32 @@
 import Typography from "@mui/material/Typography";
-import { useEffect } from "react";
+import React from "react";
 
+import FullScreenViewer from "../../components/galleryPageComponents/FullScreenViewer";
 import Gallery from "../../components/galleryPageComponents/Gallery";
 import { useGallery } from "../../contexts/GalleryContext";
+import { Photo } from "../../models/Photo";
 
 const GalleryPage = () => {
   const { photos, fetchPhotos } = useGallery();
-  useEffect(() => {
+  const [viewerPhoto, setViewerPhoto] = React.useState<Photo | undefined>();
+
+  React.useEffect(() => {
     fetchPhotos();
   }, []);
 
+  const handlePhotoClick = (photo: Photo) => {
+    setViewerPhoto(photo);
+  };
   return (
     <>
       <Typography variant="h2" component="h1" sx={{ mb: 4 }}>
         Your Photos
       </Typography>
-      <Gallery photos={photos}></Gallery>
+      <Gallery photos={photos} onPhotoClick={handlePhotoClick}></Gallery>
+      <FullScreenViewer
+        photo={viewerPhoto}
+        onClose={() => setViewerPhoto(undefined)}
+      />
     </>
   );
 };

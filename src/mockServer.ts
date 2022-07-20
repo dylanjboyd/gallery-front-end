@@ -5,6 +5,7 @@ const mockPhotos = photoIds.map((id) => ({
   title: `Photo ${id}`,
   description: `Description for photo ${id}`,
   imgSrc: `https://picsum.photos/id/${id}/200`,
+  fullImgSrc: `https://picsum.photos/id/${id}/1024`,
 }));
 
 const configureMockServer = () =>

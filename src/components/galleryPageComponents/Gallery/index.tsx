@@ -5,9 +5,10 @@ import PhotoCard from "../PhotoCard";
 
 interface GalleryProps {
   photos: Photo[];
+  onPhotoClick?: (photo: Photo) => void;
 }
 
-const Gallery = ({ photos }: GalleryProps) => {
+const Gallery = ({ photos, onPhotoClick }: GalleryProps) => {
   return (
     <Box
       sx={{
@@ -18,7 +19,11 @@ const Gallery = ({ photos }: GalleryProps) => {
       }}
     >
       {photos.map((p) => (
-        <PhotoCard photo={p} key={p.imgSrc} />
+        <PhotoCard
+          photo={p}
+          key={p.imgSrc}
+          onClick={() => onPhotoClick && onPhotoClick(p)}
+        />
       ))}
     </Box>
   );
