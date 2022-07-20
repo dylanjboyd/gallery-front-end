@@ -4,8 +4,8 @@ const photoIds = Array.from({ length: 20 }, (x, i) => i).map((x) => x + 1);
 const mockPhotos = photoIds.map((id) => ({
   title: `Photo ${id}`,
   description: `Description for photo ${id}`,
-  imgSrc: `https://picsum.photos/id/${id}/200`,
-  fullImgSrc: `https://picsum.photos/id/${id}/1024`,
+  imgSrc: `https://picsum.photos/id/${id * 5}/200`,
+  fullImgSrc: `https://picsum.photos/id/${id * 5}/1024`,
 }));
 
 const configureMockServer = () =>
