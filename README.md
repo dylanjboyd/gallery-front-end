@@ -1,46 +1,30 @@
-# Getting Started with Create React App
+# Photo Gallery
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This React application fetches photos from https://picsum.photos, and shows them in a grid with sample titles and
+descriptions. Clicking on a photo will show that photo in a larger view, switching to full screen on smaller devices
+to make use of limited screen real estate.
 
-## Available Scripts
+![Photo Gallery screenshot](./screenshot.png)
 
-In the project directory, you can run:
+## Requirements
 
-### `npm start`
+- Internet access is required to view photos, fetch the Roboto font used by Material UI, and install dependencies.
+- Node.JS 16 and npm
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Running the Application
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Clone this repository.
+2. Run `npm install` in the root of the cloned directory.
+3. Run `npm start`.
 
-### `npm test`
+## Running Tests
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Run `npm test` in the root of the cloned directory. This assumes that steps 1 and 2 above have been completed.
 
-### `npm run build`
+## External Libraries
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [axios](https://www.npmjs.com/package/axios) for issuing web requests.
+- [eslint](https://www.npmjs.com/package/eslint) to ensure correctness of TypeScript source code (for development).
+- [miragejs](https://www.npmjs.com/package/miragejs) to mock the image server in both development and testing.
+- [prettier](https://www.npmjs.com/package/prettier) to ease code formatting and consistency (for development).
+- [@mui/material](https://www.npmjs.com/package/@mui/material) for the UI framework.
