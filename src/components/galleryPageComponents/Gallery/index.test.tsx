@@ -1,12 +1,23 @@
 import { render } from "@testing-library/react";
-import FullScreenViewer from "./index";
+
+import Gallery from "./index";
 
 describe("Gallery", () => {
   it("renders placeholder text", () => {
+    // Arrange
+    const photos = [
+      {
+        title: "Test title",
+        description: "Test description",
+        imgSrc: "https://example.com",
+      },
+    ];
+
     // Act
-    const { getByText } = render(<FullScreenViewer />);
+    const { getByText } = render(<Gallery photos={photos} />);
 
     // Assert
-    expect(getByText("Gallery component")).toBeInTheDocument();
+    expect(getByText(/Test title/)).toBeInTheDocument();
+    expect(getByText(/Test description/)).toBeInTheDocument();
   });
 });
