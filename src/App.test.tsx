@@ -21,7 +21,7 @@ describe("App", () => {
     const { findByText } = render(<App />, { wrapper: BrowserRouter });
 
     // Assert
-    for (const word of ["one", "two"]) {
+    for (const word of ["1", "2"]) {
       expect(await findByText(`Photo ${word}`)).toBeInTheDocument();
       expect(
         await findByText(`Description for photo ${word}`)

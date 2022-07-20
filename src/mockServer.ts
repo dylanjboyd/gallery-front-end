@@ -1,26 +1,17 @@
 import { createServer } from "miragejs";
 
+const photoIds = [...Array(20).keys()].map((x) => x + 1);
+const mockPhotos = photoIds.map((id) => ({
+  title: `Photo ${id}`,
+  description: `Description for photo ${id}`,
+  imgSrc: `https://picsum.photos/id/${id}/200`,
+}));
+
 const configureMockServer = () =>
   createServer({
     seeds(server) {
       server.db.loadData({
-        photos: [
-          {
-            title: "Photo one",
-            description: "Description for photo one",
-            imgSrc: "https://picsum.photos/id/1/200",
-          },
-          {
-            title: "Photo two",
-            description: "Description for photo two",
-            imgSrc: "https://picsum.photos/id/2/200",
-          },
-          {
-            title: "Photo three",
-            description: "Description for photo three",
-            imgSrc: "https://picsum.photos/id/3/200",
-          },
-        ],
+        photos: mockPhotos,
       });
     },
 
