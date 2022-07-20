@@ -20,11 +20,17 @@ const GalleryThumbnails = ({
         flexDirection: "row",
         gap: 4,
         overflowX: "scroll",
+        mt: 1,
       }}
     >
       {photos.map((p) => (
         <img
-          style={{ height: 100 }}
+          style={{
+            height: 100,
+            border: `5px solid ${
+              p === activePhoto ? "LightCoral" : "DarkGray"
+            }`,
+          }}
           src={p.imgSrc}
           alt={p.title}
           key={p.imgSrc}
