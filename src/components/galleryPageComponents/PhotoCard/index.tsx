@@ -10,7 +10,7 @@ type PhotoCardProps = {
 };
 
 const PhotoCard = ({ photo }: PhotoCardProps) => (
-  <Card sx={{ maxWidth: 345 }}>
+  <Card sx={{ maxWidth: 345, flexGrow: 1 }}>
     <CardMedia
       component="img"
       height="140"

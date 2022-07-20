@@ -9,7 +9,14 @@ interface GalleryProps {
 
 const Gallery = ({ photos }: GalleryProps) => {
   return (
-    <Box sx={{ display: "flex", flexDirection: "row", gap: 4 }}>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "row",
+        flexWrap: "wrap",
+        gap: 4,
+      }}
+    >
       {photos.map((p) => (
         <PhotoCard photo={p} key={p.imgSrc} />
       ))}
