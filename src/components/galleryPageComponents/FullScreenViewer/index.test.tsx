@@ -20,6 +20,9 @@ describe("FullScreenViewer", () => {
         onClose={() => {
           // Do nothing when closing
         }}
+        onPhotoSelected={() => {
+          // Do nothing when photo selected
+        }}
       />
     );
 
@@ -34,6 +37,9 @@ describe("FullScreenViewer", () => {
         photo={undefined}
         onClose={() => {
           // Do nothing when closing
+        }}
+        onPhotoSelected={() => {
+          // Do nothing when photo selected
         }}
       />
     );

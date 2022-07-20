@@ -30,6 +30,7 @@ const GalleryThumbnails = ({
             border: `5px solid ${
               p === activePhoto ? "LightCoral" : "DarkGray"
             }`,
+            cursor: "pointer",
           }}
           src={p.imgSrc}
           alt={p.title}

@@ -26,6 +26,7 @@ const GalleryPage = () => {
       <FullScreenViewer
         photo={viewerPhoto}
         onClose={() => setViewerPhoto(undefined)}
+        onPhotoSelected={(photo) => setViewerPhoto(photo)}
       />
     </>
   );
